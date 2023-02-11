@@ -1,0 +1,12 @@
+* {
+  border: 1px solid red;
+}
+
+.frame {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: min-content max-content;
+  grid-template-areas:
+    "header header"
+    "calendar todoList";
+}
