@@ -1,5 +1,6 @@
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  font-family: american typewriter, serif;
 }
 
 .frame {
@@ -8,5 +9,9 @@
   grid-template-rows: min-content max-content;
   grid-template-areas:
     "header header"
-    "calendar todoList";
+    "calendarGrid todo";
+}
+
+.calendarGrid {
+  grid-area: calendarGrid;
 }

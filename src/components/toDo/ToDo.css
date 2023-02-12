@@ -1,0 +1,28 @@
+.todo {
+    grid-area: todo;
+    padding-left: 3em;
+    padding-right: 5em;
+}
+
+.todo>h3 {
+    margin-top: 0;
+}
+
+.todo>ul {
+    padding-left: 0;
+}
+
+.todoList {
+    list-style: none;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-gap: 0.5em;
+}
+
+.todoList>* {
+    align-self: center;
+}
+
+.todoList>span {
+    overflow-wrap: anywhere;
+}

@@ -1,0 +1,17 @@
+.header {
+    grid-area: header;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 1em auto 3em auto;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 2em;
+}
+
+h1 {
+    line-height: 1.8em;
+}
