@@ -1,11 +1,10 @@
 import './ToDoList.css';
 import Checkbox from '../basicComponents/Checkbox';
 import { Delete } from '../basicComponents/Delete';
-import { ToDoListContext } from './ToDoInput';
-import { useContext } from 'react';
+import { useToDoListContext } from './ToDoListContext';
 
 export default function ToDoList() {
-  const { listState, setListState } = useContext(ToDoListContext);
+  const { listState, setListState } = useToDoListContext();
   const handleDelete = (deletedEntry) => setListState(listState.filter(entry => entry.id !== deletedEntry.id));
   const handleCheckBoxChange = (entry) => {
     setListState(listState.map(listEntry => listEntry.id === entry.id ? { ...listEntry, 'done': !listEntry.done } : listEntry));

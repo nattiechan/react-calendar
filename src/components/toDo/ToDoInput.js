@@ -1,11 +1,10 @@
 import './ToDoInput.css';
-import { createContext, useContext, useState } from 'react';
-
-export const ToDoListContext = createContext(null);
+import { useToDoListContext } from './ToDoListContext';
+import { useState } from 'react';
 
 export default function ToDoInput() {
     const [input, setInput] = useState(null);
-    const { listState, setListState } = useContext(ToDoListContext);
+    const { listState, setListState } = useToDoListContext();
 
     const handleChange = (e) => setInput(e.target.value);
 
