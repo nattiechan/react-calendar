@@ -1,4 +1,4 @@
-.header {
+.headerContainer {
     grid-area: header;
     display: flex;
     align-content: center;

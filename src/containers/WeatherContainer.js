@@ -1,6 +1,7 @@
-import { setState, useEffect } from "react"
+import './WeatherContainer.css';
+import { setState, useEffect } from "react";
 
-export default function Weather() {
+export default function WeatherContainer() {
     // const [weather, setWeather] = setState([]);
     const weatherUrl = 'https://api.open-meteo.com/v1/forecast?latitude=49.25&longitude=-123.12&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=America%2FLos_Angeles';
 

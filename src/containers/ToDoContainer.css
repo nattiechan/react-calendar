@@ -1,0 +1,13 @@
+.todoContainer {
+    grid-area: todo;
+    padding-left: 3em;
+    padding-right: 5em;
+}
+
+.todoContainer>h3 {
+    margin-top: 0;
+}
+
+.todoContainer>ul {
+    padding-left: 0;
+}

@@ -11,7 +11,3 @@
     "header header"
     "calendarGrid todo";
 }
-
-.calendarGrid {
-  grid-area: calendarGrid;
-}

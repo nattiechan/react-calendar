@@ -1,18 +1,16 @@
 import './App.css';
-import Calendar from './components/calendar/Calendar';
-import Header from './components/header/Header';
-import ToDo from './components/toDo/ToDo';
-import Weather from './components/weather/Weather';
+import CalendarContainer from './containers/CalendarContainer';
+import HeaderContainer from './containers/HeaderContainer';
+import ToDoContainer from './containers/ToDoContainer';
+import WeatherContainer from './containers/WeatherContainer';
 
 function App() {
   return (
     <div className="frame">
-      <Header />
-      <div className='calendarGrid'>
-        <Calendar />
-      </div>
-      <ToDo />
-      <Weather />
+      <HeaderContainer />
+      <CalendarContainer />
+      <ToDoContainer />
+      <WeatherContainer />
     </div>
   );
 }

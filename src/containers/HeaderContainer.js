@@ -1,8 +1,8 @@
-import './Header.css';
+import './HeaderContainer.css';
 
-export default function Header() {
+export default function HeaderContainer() {
     return (
-        <div className='header'>
+        <div className='headerContainer'>
             <img
                 id='logo'
                 src='https://images.squarespace-cdn.com/content/v1/5d5db66bb0839800015a4dcc/1567666336252-B293S2W4FVQNIF6DZY0Y/Our-Community-Bikes-logo-orange.jpg'

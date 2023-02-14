@@ -1,18 +1,9 @@
-import './Calendar.css';
+import CalendarBox from './CalendarBox';
 import { schedule } from '../../resources/schedule';
 
 const DOW = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-export default function Calendar() {
-    return (
-        <div className="calendar">
-            <DowRow />
-            <ActivityRows />
-        </div>
-    )
-}
-
-function DowRow() {
+export function DowRow() {
     const dowBoxes = DOW.map(day => <CalendarBox boxType='dow' text={day} key={day} />)
     return (
         <>
@@ -21,7 +12,7 @@ function DowRow() {
     );
 }
 
-function ActivityRows() {
+export function ActivityRows() {
     // Ideally we will be using `useEffect()` to fetch data via API and set state accordingly
     // Since this is only a mockup of the process, we will utilize a function to construct the components instead
     const getSchedule = () => {
@@ -56,14 +47,5 @@ function ActivityRows() {
             {createComponents(fetchedSchedule.afternoon)}
             {createComponents(fetchedSchedule.evening)}
         </>
-    )
-}
-
-function CalendarBox(props) {
-    const { id, boxType, text } = props;
-    return (
-        <div id={id} className={boxType}>
-            {text}
-        </div>
     )
 }

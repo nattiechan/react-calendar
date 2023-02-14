@@ -1,5 +1,3 @@
-import './Delete.css';
-
 export const Delete = (props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
