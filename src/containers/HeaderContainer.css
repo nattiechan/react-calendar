@@ -1,9 +1,9 @@
 .headerContainer {
-    grid-area: header;
+    grid-area: headerContainer;
     display: flex;
     align-content: center;
     justify-content: center;
-    margin: 1em auto 3em auto;
+    margin: 1em auto 2em auto;
 }
 
 #logo {

@@ -5,12 +5,14 @@ import { useToDoListContext } from './ToDoListContext';
 
 export default function ToDoList() {
   const { listState, setListState } = useToDoListContext();
-  const handleDelete = (deletedEntry) => setListState(listState.filter(entry => entry.id !== deletedEntry.id));
+  const handleDelete = (deletedEntry) => setListState({ ...listState, entryList: listState.entryList.filter(entry => entry.id !== deletedEntry.id) });
   const handleCheckBoxChange = (entry) => {
-    setListState(listState.map(listEntry => listEntry.id === entry.id ? { ...listEntry, 'done': !listEntry.done } : listEntry));
+    const newEntryList = listState.entryList.map(listEntry => listEntry.id === entry.id ? { ...listEntry, 'done': !listEntry.done } : listEntry);
+    console.log(newEntryList);
+    setListState({ ...listState, entryList: newEntryList });
   }
 
-  const todoList = listState.map(entry => (
+  const todoList = listState.entryList.map(entry => (
     <li className='todoList' key={entry.id}>
       <Checkbox handleClick={() => handleCheckBoxChange(entry)} defaultChecked={entry.done} />
       <span style={{ textDecoration: entry.done ? "line-through" : null }}>{entry.task}</span>

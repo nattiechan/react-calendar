@@ -6,8 +6,11 @@
 .frame {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: min-content max-content;
+  grid-template-rows: min-content max-content min-content;
   grid-template-areas:
-    "header header"
-    "calendarGrid todo";
+    "headerContainer headerContainer"
+    "calendarContainer todoContainer"
+    "weatherContainer weatherContainer";
+  margin-left: 2em;
+  margin-right: 2em;
 }

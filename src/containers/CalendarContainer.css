@@ -1,5 +1,5 @@
 .calendarGrid {
-    grid-area: calendarGrid;
+    grid-area: calendarContainer;
 }
 
 .calendar {
