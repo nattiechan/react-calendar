@@ -1,26 +1,28 @@
 import './ToDoInput.css';
 import { useToDoListContext } from './ToDoListContext';
-import { useState } from 'react';
 
 export default function ToDoInput() {
-    const [input, setInput] = useState(null);
     const { listState, setListState } = useToDoListContext();
 
-    const handleChange = (e) => {
+    const handleChange = () => {
         const duplicateAlert = document.getElementById('duplicate');
         if (duplicateAlert.style.display === 'inline') duplicateAlert.style.display = 'none';
-        setInput(e.target.value);
     };
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            const isDuplicateTask = listState.entryList.filter(entry => entry.task === input);
+            const isDuplicateTask = listState.entryList.filter(entry => entry.task === e.target.value);
             if (isDuplicateTask.length > 0) {
                 document.getElementById('duplicate').style.display = 'inline';
             } else {
                 const newEntryId = listState.entryId + 1;
-                setListState({ entryId: newEntryId, entryList: [...listState.entryList, { 'id': newEntryId, 'task': input, 'done': false }] });
+                setListState(
+                    {
+                        entryId: newEntryId,
+                        entryList: [...listState.entryList, { 'id': newEntryId, 'task': e.target.value, 'done': false }]
+                    }
+                );
             }
             e.target.value = '';
         }
