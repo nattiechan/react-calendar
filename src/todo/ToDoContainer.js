@@ -1,6 +1,6 @@
 import './ToDoContainer.css';
-import ToDoInput from '../components/toDo/ToDoInput';
-import ToDoList from '../components/toDo/ToDoList';
+import ToDoInput from './ToDoInput';
+import ToDoList from './ToDoList';
 
 export default function ToDoContainer() {
   return (

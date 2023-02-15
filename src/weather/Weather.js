@@ -1,5 +1,5 @@
 import './Weather.css';
-import { wmoCode } from '../../resources/wmoCode';
+import { wmoCode } from '../resources/wmoCode';
 
 export default function Weather(props) {
     const weather = props.weather;

@@ -1,8 +1,8 @@
 import './App.css';
-import CalendarContainer from './containers/CalendarContainer';
-import HeaderContainer from './containers/HeaderContainer';
-import ToDoContainer from './containers/ToDoContainer';
-import WeatherContainer from './containers/WeatherContainer';
+import CalendarContainer from './calendar/CalendarContainer';
+import HeaderContainer from './header/HeaderContainer';
+import ToDoContainer from './todo/ToDoContainer';
+import WeatherContainer from './weather/WeatherContainer';
 
 function App() {
   return (

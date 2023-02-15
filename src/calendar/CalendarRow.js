@@ -1,5 +1,5 @@
 import CalendarBox from './CalendarBox';
-import { schedule } from '../../resources/schedule';
+import { schedule } from '../resources/schedule';
 
 const DOW = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 

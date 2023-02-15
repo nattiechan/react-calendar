@@ -1,6 +1,6 @@
 import './WeatherContainer.css';
 import { useEffect, useState } from "react";
-import Weather from '../components/weather/Weather'
+import Weather from './Weather'
 
 export default function WeatherContainer() {
     const [weatherState, setWeatherState] = useState([]);

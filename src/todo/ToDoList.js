@@ -1,6 +1,6 @@
 import './ToDoList.css';
-import Checkbox from '../basicComponents/Checkbox';
-import { Delete } from '../basicComponents/Delete';
+import Checkbox from '../components/Checkbox';
+import { Delete } from '../components/Delete';
 import { useToDoListContext } from './ToDoListContext';
 
 export default function ToDoList() {

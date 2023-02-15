@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ToDoListContext } from './components/toDo/ToDoListContext';
+import { ToDoListContext } from './todo/ToDoListContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

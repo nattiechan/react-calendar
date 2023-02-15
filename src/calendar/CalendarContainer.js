@@ -1,5 +1,5 @@
 import './CalendarContainer.css';
-import { DowRow, ActivityRows } from '../components/calendar/CalendarRow'
+import { DowRow, ActivityRows } from './CalendarRow'
 
 export default function CalendarContainer() {
     return (
