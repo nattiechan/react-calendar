@@ -1,16 +1,14 @@
 import './ToDoList.css';
 import Checkbox from '../components/Checkbox';
 import { Delete } from '../components/Delete';
-import { useToDoListContext } from './ToDoListContext';
+import { useToDoContext } from './ToDoContext';
+import { DELETE_TASK, TOGGLE_CHECKBOX } from './actionTypes';
 
 export default function ToDoList() {
-  const { listState, setListState } = useToDoListContext();
-  const handleDelete = (deletedEntry) => setListState({ ...listState, entryList: listState.entryList.filter(entry => entry.id !== deletedEntry.id) });
-  const handleCheckBoxChange = (entry) => {
-    const newEntryList = listState.entryList.map(listEntry => listEntry.id === entry.id ? { ...listEntry, 'done': !listEntry.done } : listEntry);
-    console.log(newEntryList);
-    setListState({ ...listState, entryList: newEntryList });
-  }
+  const [listState, dispatch] = useToDoContext();
+
+  const handleDelete = (deletedEntry) => dispatch({ type: DELETE_TASK, payload: deletedEntry.id });
+  const handleCheckBoxChange = (entry) => dispatch({ type: TOGGLE_CHECKBOX, payload: entry.id });
 
   const todoList = listState.entryList.map(entry => (
     <li className='todoList' key={entry.id}>

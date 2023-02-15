@@ -1,8 +1,9 @@
 import './ToDoInput.css';
-import { useToDoListContext } from './ToDoListContext';
+import { ADD_NEW_TASK } from './actionTypes';
+import { useToDoContext } from './ToDoContext';
 
 export default function ToDoInput() {
-    const { listState, setListState } = useToDoListContext();
+    const [listState, dispatch] = useToDoContext();
 
     const handleChange = () => {
         const duplicateAlert = document.getElementById('duplicate');
@@ -16,13 +17,7 @@ export default function ToDoInput() {
             if (isDuplicateTask.length > 0) {
                 document.getElementById('duplicate').style.display = 'inline';
             } else {
-                const newEntryId = listState.entryId + 1;
-                setListState(
-                    {
-                        entryId: newEntryId,
-                        entryList: [...listState.entryList, { 'id': newEntryId, 'task': e.target.value, 'done': false }]
-                    }
-                );
+                dispatch({ type: ADD_NEW_TASK, payload: e.target.value });
             }
             e.target.value = '';
         }
