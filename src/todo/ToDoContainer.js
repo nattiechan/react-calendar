@@ -15,7 +15,7 @@ export default function ToDoContainer() {
   const [listState, dispatch] = useReducer(taskReducer, initialState);
 
   return (
-    <div className="todoContainer">
+    <section className="todoContainer">
       <h3>To-do List</h3>
       <p>
         Press Enter key to log an item to the list.
@@ -25,6 +25,6 @@ export default function ToDoContainer() {
         <ToDoInput />
         <ToDoList />
       </ToDoContext.Provider>
-    </div>
+    </section>
   );
 }

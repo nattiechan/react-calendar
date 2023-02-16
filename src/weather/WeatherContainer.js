@@ -28,15 +28,15 @@ export default function WeatherContainer() {
     }, []);
 
     return (
-        <div className='weatherContainer'>
-            <div className='weatherHeader'>
+        <section className='weatherContainer'>
+            <header className='weatherHeader'>
                 <h3>Looking to get a ride in?</h3>
                 <p>Check the weather forecast below and make sure you dress for the weather.
                     Ride safely!</p>
-            </div>
+            </header>
             <div className='weatherGrid'>
                 {weatherState.map(day => <Weather key={day.date} weather={day} />)}
             </div>
-        </div>
+        </section>
     );
 }
