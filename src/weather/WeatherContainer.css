@@ -1,5 +1,6 @@
 .weatherContainer {
     grid-area: weatherContainer;
+    margin-top: 2em;
 }
 
 .weatherHeader>* {
@@ -9,4 +10,14 @@
 .weatherGrid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+}
+
+@media screen and (max-width: 1023px) {
+    .weatherContainer {
+        margin-top: 0;
+    }
+
+    .weatherGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

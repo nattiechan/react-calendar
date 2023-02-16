@@ -5,14 +5,31 @@
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, min-content);
     text-align: center;
     margin-left: 1em;
     border: 10px solid transparent;
     border-image: url('http://www.clker.com/cliparts/V/B/T/z/T/r/bike-chain-border.svg.hi.png') 40 repeat;
-
 }
 
 .calendar>* {
     border: 1px solid rgb(167, 167, 167);
+    padding: 0.5em;
+}
+
+.dow {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .calendar {
+        margin-left: 0;
+        margin-bottom: 2em;
+    }
+
+    .calendar>* {
+        padding: 0.3em;
+    }
 }

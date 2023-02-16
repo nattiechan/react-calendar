@@ -4,3 +4,11 @@
     padding-right: 3em;
     height: 45vh;
 }
+
+@media screen and (max-width: 900px) {
+    .todoContainer {
+        padding-left: 2em;
+        padding-right: 2em;
+        height: auto;
+    }
+}
