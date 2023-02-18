@@ -1,8 +1,16 @@
 # React-calendar
 
-An exercise on **using React** to create a program calendar website with a to-do list and weather forecast functionalities. Contents of the program calendar are taken from the [Our Community Bikes website](https://ourcommunitybikes.org/) which the author is a current volunteer with the organization.
+An exploration of topics and technologies presented in the Codesmith software engineering immersive program through a program calendar website with a to-do list and weather forecast functionalities. Contents of the program calendar are taken from the [Our Community Bikes website](https://ourcommunitybikes.org/) which the author is a current volunteer with the organization.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies explored:
+- React (bootstrapped with [Create React App](https://github.com/facebook/create-react-app))
+- React hooks
+- Express
+
+Topics explored:
+- Semantic HTML
+- State management
+
 
 ----------------------------------------
 
