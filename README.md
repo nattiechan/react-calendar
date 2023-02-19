@@ -28,19 +28,33 @@ Step 1: Clone the repo to your desired folder in your local environment
 git clone https://github.com/nattiechan/react-calendar.git
 ```
 
-Step 2: Run the app in development mode. In terminal, run:
+Step 2: Start the backend server. In terminal run:
+
+```
+npm run server
+```
+
+Step 3: React-router is not installed yet, so the front end needs to be initialized in a separate terminal window/tab:
 
 ```
 npm start
 ```
 
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+-----------------------------
+
+### Credits:
+
+- WMO Code mapping reference: https://open-meteo.com/en/docs
 
 -----------------------------
 
 ### TODOs:
 
 - Additional styling: background, custom border, potentially custom scroll bar for to-do list, make forecast easier to read
+- Backend for fetching schedule as a JSON file
 - Add links to program schedule
 - [Stretch goal] Add weather icon to forecast (Potential resource [here](https://developer.weathersourceapis.com/apis/appwx-weather-icons/))
 
