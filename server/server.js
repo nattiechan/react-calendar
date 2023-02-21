@@ -2,12 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080;
+
 const weatherRouter = require('./routers/weather');
+const calendarRouter = require('./routers/calendar');
 
 app.use(express.json());
 
 // route handlers
 app.use('/weather', weatherRouter);
+app.use('/calendar', calendarRouter);
 
 // main app
 app.get('/', (_, res) => res.sendFile(path.join(__dirname, '../public/index.html')));

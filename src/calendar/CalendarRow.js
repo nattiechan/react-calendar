@@ -1,10 +1,19 @@
 import CalendarBox from './CalendarBox';
-import { schedule } from '../resources/schedule';
-
-const DOW = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+import { useEffect, useState } from 'react';
 
 export function DowRow() {
-    const dowBoxes = DOW.map(day => <CalendarBox boxType='dow' text={day} key={day} />)
+    const [dow, setDow] = useState([]);
+
+    useEffect(() => {
+        fetch('/calendar/dow')
+            .then(response => response.json())
+            .then(json => setDow(json.dow))
+    }, []);
+
+    const dowBoxes = dow.length === 0
+        ? <></>
+        : dow.map(day => <CalendarBox boxType='dow' text={day} key={day} />);
+
     return (
         <>
             {dowBoxes}
@@ -13,39 +22,24 @@ export function DowRow() {
 }
 
 export function ActivityRows() {
-    // Ideally we will be using `useEffect()` to fetch data via API and set state accordingly
-    // Since this is only a mockup of the process, we will utilize a function to construct the components instead
-    const getSchedule = () => {
-        const morning = Array(7).fill(null);
-        const afternoon = Array(7).fill(null);
-        const evening = Array(7).fill(null);
-        schedule.forEach(entry => {
-            switch (entry.timeOfDay) {
-                case 1:
-                    morning[DOW.indexOf(entry.day)] = entry;
-                    break;
-                case 2:
-                    afternoon[DOW.indexOf(entry.day)] = entry;
-                    break;
-                case 3:
-                    evening[DOW.indexOf(entry.day)] = entry;
-                    break;
-                default:
-                    console.log(`Invalid Entry: ${entry}`);
-            }
-        })
-        return { "morning": morning, "afternoon": afternoon, "evening": evening };
-    };
+    const [schedule, setSchedule] = useState({});
 
-    const createComponents = (entries) => entries.map(entry => <CalendarBox boxType='activity' text={entry.activity} key={`${entry.day}${entry.timeOfDay}`} />);
+    useEffect(() => {
+        fetch('/calendar/schedule')
+            .then(response => response.json())
+            .then(json => setSchedule(json))
+    }, []);
 
-    const fetchedSchedule = getSchedule();
+    const createComponents = (entries) =>
+        entries === undefined
+            ? <></>
+            : entries.map(entry => <CalendarBox boxType='activity' text={entry.activity} key={`${entry.day}${entry.timeOfDay}`} />);
 
     return (
         <>
-            {createComponents(fetchedSchedule.morning)}
-            {createComponents(fetchedSchedule.afternoon)}
-            {createComponents(fetchedSchedule.evening)}
+            {createComponents(schedule.morning)}
+            {createComponents(schedule.afternoon)}
+            {createComponents(schedule.evening)}
         </>
     )
 }
