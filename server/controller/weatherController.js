@@ -26,7 +26,7 @@ const processWeatherData = async (data) => {
         // We need timestamp with timezone information to obtain day-of-week (DOW) correctly
         // Since only sunrise/sunset times are timestamps, we will use them to get DOW instead
         const dow = new Date(sunrise).toLocaleDateString('en-US', { weekday: 'short' });
-        const getTime = (timestamp) => new Date(timestamp).toLocaleTimeString('en-US');
+        const getTime = (timestamp) => new Date(timestamp).toLocaleTimeString('en-US', { timeStyle: 'short' });
         output.push({
             'dow': dow,
             'date': info.time[i],
