@@ -31,20 +31,13 @@ Step 1: Clone the repo to your desired folder in your local environment
 git clone https://github.com/nattiechan/react-calendar.git
 ```
 
-Step 2: Start the backend server. In terminal run:
+Step 2: Start the application. In terminal run:
 
 ```
-npm run server
+npm run dev
 ```
 
-Step 3: React-router is not installed yet, so the front end needs to be initialized in a separate terminal window/tab:
-
-```
-npm start
-```
-
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If the webpage does not open on its own, view it in your browser by entering the URL [http://localhost:3000](http://localhost:3000).
 
 -----------------------------
 
