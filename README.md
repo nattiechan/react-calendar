@@ -49,8 +49,7 @@ If the webpage does not open on its own, view it in your browser by entering the
 
 ### TODOs:
 
-- Additional styling: background, custom border, potentially custom scroll bar for to-do list, make forecast easier to read
-- Backend for fetching schedule as a JSON file
+- Additional styling: potentially custom scroll bar for to-do list, make forecast easier to read
 - Add links to program schedule
 - [Stretch goal] Add weather icon to forecast (Potential resource [here](https://developer.weathersourceapis.com/apis/appwx-weather-icons/))
 
