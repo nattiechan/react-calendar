@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "npx nodemon server/server.js"
+    "server": "npx nodemon server/server.js",
+    "dev": "concurrently \"react-scripts start\" \"npx nodemon server/server.js\""
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
