@@ -1,26 +1,18 @@
+html {
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url('https://img.freepik.com/free-photo/cyclist-riding-bike-sunset-mountain-road_346278-468.jpg?w=900&t=st=1677021987~exp=1677022587~hmac=a8e67cf71205b00f348eb48e839bbcfb8d2680a49e677c8597a3b72b129d5501') no-repeat;
+  background-size: cover;
+}
+
 body {
   margin: 0;
+  min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url('https://img.freepik.com/free-photo/cyclist-riding-bike-sunset-mountain-road_346278-468.jpg?w=900&t=st=1677021987~exp=1677022587~hmac=a8e67cf71205b00f348eb48e839bbcfb8d2680a49e677c8597a3b72b129d5501') no-repeat;
-  background-size: cover;
 }
-
-/* .root::before {
-  content: "";
-  background: url('https://img.freepik.com/free-photo/cyclist-riding-bike-sunset-mountain-road_346278-468.jpg?w=900&t=st=1677021987~exp=1677022587~hmac=a8e67cf71205b00f348eb48e839bbcfb8d2680a49e677c8597a3b72b129d5501');
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
